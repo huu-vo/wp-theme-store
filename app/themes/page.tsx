@@ -323,14 +323,6 @@ export default function ThemesPage() {
                 )}
                 <span className="hidden sm:inline">Sắp xếp</span>
               </button>
-
-              <button
-                onClick={() => setModal({ open: true })}
-                className="inline-flex items-center gap-2 px-6 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-2xl hover:shadow-lg transform hover:scale-105 transition-all duration-200 font-medium"
-              >
-                <Plus className="w-5 h-5" />
-                <span className="hidden sm:inline">Thêm theme</span>
-              </button>
             </div>
 
             {/* Search Results Info */}
@@ -412,12 +404,6 @@ export default function ThemesPage() {
                           </div>
                         </div>
                       </div>
-                      <button
-                        onClick={() => setModal({ open: true, theme: t })}
-                        className="p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-xl transition-colors"
-                      >
-                        <Edit3 className="w-4 h-4" />
-                      </button>
                     </div>
 
                     {/* Theme Description */}
@@ -486,16 +472,6 @@ export default function ThemesPage() {
                         <span className="text-sm">
                           Xem Demo ({t.demos?.length || 0})
                         </span>
-                      </button>
-                      <button
-                        onClick={() => {
-                          if (t.demos?.[0]?.url) {
-                            window.open(t.demos[0].url, "_blank");
-                          }
-                        }}
-                        className="px-4 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl hover:shadow-lg transform hover:scale-105 transition-all duration-200 font-medium text-sm"
-                      >
-                        Chọn
                       </button>
                     </div>
                   </div>
@@ -633,37 +609,39 @@ export default function ThemesPage() {
                     {selectedTheme.demos.map((demo: any, index: number) => (
                       <div
                         key={demo.id}
-                        className="group bg-gray-50 dark:bg-gray-700/50 border border-gray-200 dark:border-gray-600 rounded-2xl p-6 hover:bg-white dark:hover:bg-gray-700 hover:shadow-lg transition-all duration-300 animate-slideUp"
+                        className="group relative bg-white dark:bg-gray-800/80 border border-gray-200/60 dark:border-gray-700/60 rounded-2xl p-6 hover:bg-gradient-to-br hover:from-white hover:to-blue-50/30 dark:hover:from-gray-800 dark:hover:to-blue-900/20 hover:shadow-xl hover:shadow-blue-500/10 hover:border-blue-200/50 dark:hover:border-blue-700/50 transition-all duration-500 animate-slideUp transform hover:-translate-y-1 hover:scale-[1.02] backdrop-blur-sm"
                         style={{ animationDelay: `${index * 100}ms` }}
                       >
                         {/* Demo Preview Image */}
                         {demo.image && (
-                          <div className="mb-4 rounded-xl overflow-hidden bg-gray-200 dark:bg-gray-600">
+                          <div className="relative mb-4 rounded-xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-800 shadow-inner">
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
                             <img
                               src={demo.image}
                               alt={demo.name}
-                              className="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-300"
+                              className="w-full h-32 object-cover group-hover:scale-110 transition-all duration-500 ease-out"
                               onError={(e) => {
                                 e.currentTarget.style.display = "none";
                               }}
                             />
+                            <div className="absolute inset-0 ring-1 ring-gray-300/50 dark:ring-gray-600/50 rounded-xl"></div>
                           </div>
                         )}
 
                         <div className="flex items-start justify-between mb-4">
                           <div className="flex-1">
-                            <h4 className="font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 transition-colors">
+                            <h4 className="font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 transition-colors text-lg leading-tight">
                               {demo.name}
                             </h4>
                             {demo.url && (
-                              <p className="text-sm text-gray-500 dark:text-gray-400 truncate">
+                              <p className="text-sm text-gray-500 dark:text-gray-400 font-mono bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-lg inline-block break-all">
                                 {demo.url}
                               </p>
                             )}
                           </div>
-                          <div className="flex items-center gap-1 text-yellow-500 ml-3">
-                            <Star className="w-3 h-3 fill-current" />
-                            <span className="text-xs font-medium text-gray-600 dark:text-gray-400">
+                          <div className="flex items-center gap-1 text-yellow-500 ml-3 group-hover:scale-110 transition-transform duration-300 border-t border-gray-200">
+                            <Star className="w-4 h-4 fill-current group-hover:rotate-12 transition-transform duration-300" />
+                            <span className="text-sm font-bold text-gray-700 dark:text-gray-300">
                               4.9
                             </span>
                           </div>
@@ -687,10 +665,12 @@ export default function ThemesPage() {
                         {demo.url && (
                           <button
                             onClick={() => window.open(demo.url, "_blank")}
-                            className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl hover:shadow-lg transform hover:scale-105 transition-all duration-200 font-medium"
+                            className="group/btn relative w-auto inline-flex items-center justify-center gap-2 px-5 py-3 bg-gradient-to-r from-blue-600 via-blue-700 to-purple-600 text-white rounded-xl hover:shadow-xl hover:shadow-blue-500/25 transform hover:scale-105 transition-all duration-300 font-medium overflow-hidden"
                           >
-                            <ExternalLink className="w-4 h-4" />
-                            <span>Xem Demo Live</span>
+                            <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
+                            <ExternalLink className="w-4 h-4 group-hover/btn:rotate-12 transition-transform duration-300" />
+                            <span className="relative z-10">Xem Demo Live</span>
+                            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700"></div>
                           </button>
                         )}
                       </div>

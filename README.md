@@ -18,3 +18,4 @@ Push lên GitHub và import trên Vercel — Next.js sẽ tự build.
 
 Ngôn ngữ: Tiếng Việt. Brand: H Themes.
 # wp-theme
+# wp-theme-store

@@ -13,6 +13,7 @@ import {
   Eye,
   ExternalLink,
   Filter,
+  Globe,
 } from "lucide-react";
 
 type Demo = { id: string; name: string; image?: string; url?: string };
@@ -445,94 +446,94 @@ export default function HomePage() {
       <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-blue-900/20 dark:to-purple-900/20">
         {/* Background Pattern */}
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-        <div className="absolute top-0 left-1/4 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
+        <div className="absolute top-0 left-1/4 w-48 h-48 sm:w-72 sm:h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
         <div
-          className="absolute top-0 right-1/4 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"
+          className="absolute top-0 right-1/4 w-48 h-48 sm:w-72 sm:h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"
           style={{ animationDelay: "2s" }}
         ></div>
         <div
-          className="absolute -bottom-8 left-1/3 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"
+          className="absolute -bottom-8 left-1/3 w-48 h-48 sm:w-72 sm:h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"
           style={{ animationDelay: "4s" }}
         ></div>
 
-        <div className="relative max-w-7xl mx-auto px-6 py-20 md:py-28">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20 md:py-28">
           <div className="text-center">
             {/* Logo with enhanced animation */}
-            <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl shadow-2xl mb-8 animate-bounceOnce">
-              <img
-                src="/logo.svg"
-                alt="H Themes"
-                className="w-12 h-12 filter brightness-0 invert"
-              />
+            <div className="inline-flex items-center justify-center w-16 h-16 sm:w-24 sm:h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl sm:rounded-3xl shadow-2xl mb-6 sm:mb-8 animate-bounceOnce">
+              <div className="w-8 h-8 sm:w-12 sm:h-12 bg-white rounded-lg flex items-center justify-center">
+                <span className="text-blue-600 font-bold text-lg sm:text-2xl">
+                  H
+                </span>
+              </div>
             </div>
 
-            {/* Main Title with gradient text */}
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fadeIn">
+            {/* Main Title with gradient text - Mobile optimized */}
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6 animate-fadeIn hero-text">
               <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent">
                 H Themes
               </span>
             </h1>
 
-            {/* Enhanced subtitle */}
-            <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 max-w-4xl mx-auto mb-4 animate-slideUp font-light leading-relaxed">
+            {/* Enhanced subtitle - Mobile optimized */}
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-700 dark:text-gray-300 max-w-4xl mx-auto mb-3 sm:mb-4 animate-slideUp font-light leading-relaxed px-4">
               Kho theme WordPress chuyên nghiệp
             </p>
             <p
-              className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-10 animate-slideUp"
+              className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-8 sm:mb-10 animate-slideUp px-4"
               style={{ animationDelay: "0.2s" }}
             >
               Phân loại theo ngành nghề với nhiều demo live cho mỗi theme • Tối
               ưu SEO • Responsive hoàn hảo
             </p>
 
-            {/* Enhanced CTA button */}
+            {/* Enhanced CTA button - Mobile optimized */}
             <div
-              className="flex items-center justify-center mb-12 animate-slideUp"
+              className="flex items-center justify-center mb-8 sm:mb-12 animate-slideUp px-4"
               style={{ animationDelay: "0.4s" }}
             >
               <Link
                 href="/themes"
-                className="group inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-2xl hover:shadow-2xl hover:shadow-blue-500/25 transform hover:scale-105 transition-all duration-300 font-semibold text-lg"
+                className="group inline-flex items-center gap-2 sm:gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl hover:shadow-2xl hover:shadow-blue-500/25 transform hover:scale-105 transition-all duration-300 font-semibold text-base sm:text-lg"
               >
                 <span>Khám phá ngay</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
 
-            {/* Stats Section */}
+            {/* Stats Section - Mobile optimized */}
             <div
-              className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto animate-slideUp"
+              className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 max-w-4xl mx-auto animate-slideUp px-4"
               style={{ animationDelay: "0.6s" }}
             >
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-1 sm:mb-2">
                   {Object.values(themesByCat).flat().length}+
                 </div>
-                <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">
+                <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 font-medium">
                   Premium Themes
                 </div>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-green-600 dark:text-green-400 mb-2">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-green-600 dark:text-green-400 mb-1 sm:mb-2">
                   4
                 </div>
-                <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">
+                <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 font-medium">
                   Ngành nghề
                 </div>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-purple-600 dark:text-purple-400 mb-2">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-600 dark:text-purple-400 mb-1 sm:mb-2">
                   50+
                 </div>
-                <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">
+                <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 font-medium">
                   Live Demos
                 </div>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-orange-600 dark:text-orange-400 mb-2">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-orange-600 dark:text-orange-400 mb-1 sm:mb-2">
                   100%
                 </div>
-                <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">
+                <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 font-medium">
                   Responsive
                 </div>
               </div>
@@ -543,7 +544,7 @@ export default function HomePage() {
         {/* Bottom wave */}
         <div className="absolute bottom-0 left-0 right-0">
           <svg
-            className="w-full h-16 text-white dark:text-gray-900"
+            className="w-full h-8 sm:h-16 text-white dark:text-gray-900"
             viewBox="0 0 1200 120"
             preserveAspectRatio="none"
           >
@@ -555,38 +556,38 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-6 py-12">
-        <div className="bg-white dark:bg-gray-800 rounded-3xl p-8 md:p-10 shadow-xl border border-gray-100 dark:border-gray-700 backdrop-blur-sm">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+        <div className="bg-white dark:bg-gray-800 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 shadow-xl border border-gray-100 dark:border-gray-700 backdrop-blur-sm">
           {/* Header Section */}
-          <div className="text-center mb-8">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full mb-4">
-              <Search className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+          <div className="text-center mb-6 sm:mb-8">
+            <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full mb-3 sm:mb-4">
+              <Search className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600 dark:text-blue-400" />
             </div>
-            <h2 className="text-3xl font-bold mb-3 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-2 sm:mb-3 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               Tìm kiếm & Lọc Theme
             </h2>
-            <p className="text-gray-600 dark:text-gray-300 max-w-lg mx-auto">
+            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 max-w-lg mx-auto px-4">
               Khám phá hàng trăm theme WordPress chất lượng cao, được phân loại
               theo ngành nghề
             </p>
           </div>
 
           {/* Enhanced Search Input */}
-          <div className="max-w-2xl mx-auto mb-8">
+          <div className="max-w-2xl mx-auto mb-6 sm:mb-8">
             <div className="relative">
-              <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                <Search className="h-5 w-5 text-gray-400" />
+              <div className="absolute inset-y-0 left-0 pl-3 sm:pl-4 flex items-center pointer-events-none">
+                <Search className="h-4 w-4 sm:h-5 sm:w-5 text-gray-400" />
               </div>
               <input
                 value={globalSearch}
                 onChange={(e) => setGlobalSearch(e.target.value)}
-                placeholder="Tìm kiếm theo tên theme (VD: Houzez, Flatsome) hoặc danh mục (VD: Bất động sản, Y tế)..."
-                className="w-full pl-12 pr-4 py-4 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-gray-900 dark:text-gray-100 placeholder-gray-500 transition-all duration-200"
+                placeholder="Tìm kiếm theme (VD: Houzez, Flatsome) hoặc danh mục..."
+                className="w-full pl-10 sm:pl-12 pr-3 sm:pr-4 py-3 sm:py-4 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl sm:rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-gray-900 dark:text-gray-100 placeholder-gray-500 transition-all duration-200 text-sm sm:text-base"
               />
               {globalSearch && (
                 <button
                   onClick={() => setGlobalSearch("")}
-                  className="absolute inset-y-0 right-0 pr-4 flex items-center text-gray-400 hover:text-gray-600"
+                  className="absolute inset-y-0 right-0 pr-3 sm:pr-4 flex items-center text-gray-400 hover:text-gray-600"
                 >
                   <span className="text-lg">×</span>
                 </button>
@@ -596,10 +597,14 @@ export default function HomePage() {
             {/* Search suggestions when typing */}
             {globalSearch && globalSearch.trim() && (
               <div className="mt-3 text-center">
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-full">
+                <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-full">
                   <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
                   <span className="text-xs text-blue-700 dark:text-blue-300">
-                    Tìm kiếm "{globalSearch}" trong tên theme và danh mục...
+                    Tìm kiếm "
+                    {globalSearch.length > 20
+                      ? globalSearch.substring(0, 20) + "..."
+                      : globalSearch}
+                    " trong tên theme và danh mục...
                   </span>
                 </div>
               </div>
@@ -615,23 +620,24 @@ export default function HomePage() {
               </span>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-3 mb-8">
+            <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 px-2">
               <button
                 onClick={() => {
                   console.log("🎯 Category button clicked: all");
                   setSelectedCategory("all");
                 }}
-                className={`group relative px-6 py-3 rounded-2xl text-sm font-semibold transition-all duration-300 transform hover:scale-105 ${
+                className={`group relative px-4 sm:px-6 py-2 sm:py-3 rounded-xl sm:rounded-2xl text-xs sm:text-sm font-semibold transition-all duration-300 transform hover:scale-105 category-btn ${
                   selectedCategory === "all"
                     ? "bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg shadow-blue-500/25"
                     : "bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-600 hover:text-blue-600"
                 }`}
               >
-                <div className="flex items-center gap-2">
-                  <Layers3 className="w-4 h-4" />
-                  <span>Tất cả</span>
+                <div className="flex items-center gap-1 sm:gap-2">
+                  <Layers3 className="w-3 h-3 sm:w-4 sm:h-4" />
+                  <span className="hidden sm:inline">Tất cả</span>
+                  <span className="sm:hidden">All</span>
                   <span
-                    className={`text-xs px-2 py-0.5 rounded-full ${
+                    className={`text-xs px-1.5 sm:px-2 py-0.5 rounded-full ${
                       selectedCategory === "all"
                         ? "bg-white/20 text-white"
                         : "bg-gray-200 dark:bg-gray-600 text-gray-600 dark:text-gray-300"
@@ -647,17 +653,18 @@ export default function HomePage() {
                   console.log("🎯 Category button clicked: realestate");
                   setSelectedCategory("realestate");
                 }}
-                className={`group relative px-6 py-3 rounded-2xl text-sm font-semibold transition-all duration-300 transform hover:scale-105 ${
+                className={`group relative px-4 sm:px-6 py-2 sm:py-3 rounded-xl sm:rounded-2xl text-xs sm:text-sm font-semibold transition-all duration-300 transform hover:scale-105 category-btn ${
                   selectedCategory === "realestate"
                     ? "bg-gradient-to-r from-emerald-600 to-emerald-700 text-white shadow-lg shadow-emerald-500/25"
                     : "bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-emerald-50 dark:hover:bg-gray-600 hover:text-emerald-600"
                 }`}
               >
-                <div className="flex items-center gap-2">
-                  <Building2 className="w-4 h-4" />
-                  <span>Bất động sản</span>
+                <div className="flex items-center gap-1 sm:gap-2">
+                  <Building2 className="w-3 h-3 sm:w-4 sm:h-4" />
+                  <span className="hidden sm:inline">Bất động sản</span>
+                  <span className="sm:hidden">BĐS</span>
                   <span
-                    className={`text-xs px-2 py-0.5 rounded-full ${
+                    className={`text-xs px-1.5 sm:px-2 py-0.5 rounded-full ${
                       selectedCategory === "realestate"
                         ? "bg-white/20 text-white"
                         : "bg-gray-200 dark:bg-gray-600 text-gray-600 dark:text-gray-300"
@@ -673,17 +680,18 @@ export default function HomePage() {
                   console.log("🎯 Category button clicked: medicaltourism");
                   setSelectedCategory("medicaltourism");
                 }}
-                className={`group relative px-6 py-3 rounded-2xl text-sm font-semibold transition-all duration-300 transform hover:scale-105 ${
+                className={`group relative px-4 sm:px-6 py-2 sm:py-3 rounded-xl sm:rounded-2xl text-xs sm:text-sm font-semibold transition-all duration-300 transform hover:scale-105 category-btn ${
                   selectedCategory === "medicaltourism"
                     ? "bg-gradient-to-r from-pink-600 to-pink-700 text-white shadow-lg shadow-pink-500/25"
                     : "bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-pink-50 dark:hover:bg-gray-600 hover:text-pink-600"
                 }`}
               >
-                <div className="flex items-center gap-2">
-                  <Stethoscope className="w-4 h-4" />
-                  <span>Y tế & Du lịch</span>
+                <div className="flex items-center gap-1 sm:gap-2">
+                  <Stethoscope className="w-3 h-3 sm:w-4 sm:h-4" />
+                  <span className="hidden sm:inline">Y tế & Du lịch</span>
+                  <span className="sm:hidden">Y tế</span>
                   <span
-                    className={`text-xs px-2 py-0.5 rounded-full ${
+                    className={`text-xs px-1.5 sm:px-2 py-0.5 rounded-full ${
                       selectedCategory === "medicaltourism"
                         ? "bg-white/20 text-white"
                         : "bg-gray-200 dark:bg-gray-600 text-gray-600 dark:text-gray-300"
@@ -699,17 +707,18 @@ export default function HomePage() {
                   console.log("🎯 Category button clicked: ecommerce");
                   setSelectedCategory("ecommerce");
                 }}
-                className={`group relative px-6 py-3 rounded-2xl text-sm font-semibold transition-all duration-300 transform hover:scale-105 ${
+                className={`group relative px-4 sm:px-6 py-2 sm:py-3 rounded-xl sm:rounded-2xl text-xs sm:text-sm font-semibold transition-all duration-300 transform hover:scale-105 category-btn ${
                   selectedCategory === "ecommerce"
                     ? "bg-gradient-to-r from-orange-600 to-orange-700 text-white shadow-lg shadow-orange-500/25"
                     : "bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-orange-50 dark:hover:bg-gray-600 hover:text-orange-600"
                 }`}
               >
-                <div className="flex items-center gap-2">
-                  <ShoppingCart className="w-4 h-4" />
-                  <span>E-commerce</span>
+                <div className="flex items-center gap-1 sm:gap-2">
+                  <ShoppingCart className="w-3 h-3 sm:w-4 sm:h-4" />
+                  <span className="hidden sm:inline">E-commerce</span>
+                  <span className="sm:hidden">Shop</span>
                   <span
-                    className={`text-xs px-2 py-0.5 rounded-full ${
+                    className={`text-xs px-1.5 sm:px-2 py-0.5 rounded-full ${
                       selectedCategory === "ecommerce"
                         ? "bg-white/20 text-white"
                         : "bg-gray-200 dark:bg-gray-600 text-gray-600 dark:text-gray-300"
@@ -725,17 +734,18 @@ export default function HomePage() {
                   console.log("🎯 Category button clicked: others");
                   setSelectedCategory("others");
                 }}
-                className={`group relative px-6 py-3 rounded-2xl text-sm font-semibold transition-all duration-300 transform hover:scale-105 ${
+                className={`group relative px-4 sm:px-6 py-2 sm:py-3 rounded-xl sm:rounded-2xl text-xs sm:text-sm font-semibold transition-all duration-300 transform hover:scale-105 category-btn ${
                   selectedCategory === "others"
                     ? "bg-gradient-to-r from-purple-600 to-purple-700 text-white shadow-lg shadow-purple-500/25"
                     : "bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-gray-600 hover:text-purple-600"
                 }`}
               >
-                <div className="flex items-center gap-2">
-                  <Layers3 className="w-4 h-4" />
-                  <span>Đa năng</span>
+                <div className="flex items-center gap-1 sm:gap-2">
+                  <Layers3 className="w-3 h-3 sm:w-4 sm:h-4" />
+                  <span className="hidden sm:inline">Đa năng</span>
+                  <span className="sm:hidden">Khác</span>
                   <span
-                    className={`text-xs px-2 py-0.5 rounded-full ${
+                    className={`text-xs px-1.5 sm:px-2 py-0.5 rounded-full ${
                       selectedCategory === "others"
                         ? "bg-white/20 text-white"
                         : "bg-gray-200 dark:bg-gray-600 text-gray-600 dark:text-gray-300"
@@ -860,7 +870,7 @@ export default function HomePage() {
 
                 {/* Enhanced Theme Cards */}
                 {preview.length ? (
-                  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
                     {preview
                       .filter((t) => {
                         // Additional filtering for themes within categories when searching
@@ -881,13 +891,13 @@ export default function HomePage() {
                       .map((t, index) => (
                         <div
                           key={t.id}
-                          className="group card-hover bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all duration-300"
+                          className="group card-hover bg-white dark:bg-gray-800 rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all duration-300"
                           style={{ animationDelay: `${index * 100}ms` }}
                         >
                           {/* Theme Header */}
-                          <div className="flex items-start justify-between mb-4">
-                            <div className="flex-1">
-                              <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 transition-colors">
+                          <div className="flex items-start justify-between mb-3 sm:mb-4">
+                            <div className="flex-1 min-w-0">
+                              <h4 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 transition-colors truncate">
                                 {/* Highlight search term in theme name */}
                                 {globalSearch && globalSearch.trim() ? (
                                   <span
@@ -902,7 +912,7 @@ export default function HomePage() {
                                   t.name
                                 )}
                               </h4>
-                              <div className="flex items-center gap-2">
+                              <div className="flex items-center gap-2 flex-wrap">
                                 <span
                                   className={`inline-flex items-center px-2 py-1 rounded-lg text-xs font-medium bg-${colors.accent}-100 text-${colors.accent}-800 dark:bg-${colors.accent}-900/30 dark:text-${colors.accent}-300`}
                                 >
@@ -931,7 +941,7 @@ export default function HomePage() {
                           </div>
 
                           {/* Theme Description */}
-                          <p className="text-sm text-gray-600 dark:text-gray-300 mb-6 line-clamp-3 leading-relaxed">
+                          <p className="text-sm text-gray-600 dark:text-gray-300 mb-4 sm:mb-6 line-clamp-3 leading-relaxed">
                             {/* Highlight search term in description */}
                             {globalSearch && globalSearch.trim() ? (
                               <span
@@ -948,8 +958,8 @@ export default function HomePage() {
                           </p>
 
                           {/* Demo Info */}
-                          <div className="flex items-center gap-2 mb-6 p-3 bg-gray-50 dark:bg-gray-700/50 rounded-xl">
-                            <Eye className="w-4 h-4 text-blue-500" />
+                          <div className="flex items-center gap-2 mb-4 sm:mb-6 p-3 bg-gray-50 dark:bg-gray-700/50 rounded-xl">
+                            <Eye className="w-4 h-4 text-blue-500 flex-shrink-0" />
                             <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                               {t.demos?.length || 0} demo live
                             </span>
@@ -960,13 +970,13 @@ export default function HomePage() {
                           </div>
 
                           {/* Action Buttons */}
-                          <div className="flex gap-3">
+                          <div className="flex gap-2 sm:gap-3">
                             <button
                               onClick={() => openDemoModal(t)}
-                              className="flex-1 flex items-center justify-center gap-2 px-4 py-3 text-blue-600 border border-blue-200 dark:border-blue-700 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors font-medium"
+                              className="flex-1 flex items-center justify-center gap-2 px-3 sm:px-4 py-2 sm:py-3 text-blue-600 border border-blue-200 dark:border-blue-700 rounded-lg sm:rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors font-medium text-sm"
                             >
-                              <ExternalLink className="w-4 h-4" />
-                              <span className="text-sm">Xem Demo</span>
+                              <ExternalLink className="w-4 h-4 flex-shrink-0" />
+                              <span>Xem Demo</span>
                             </button>
                           </div>
                         </div>
@@ -1019,90 +1029,150 @@ export default function HomePage() {
         )}
       </section>
 
-      {/* Modal cho Demo Chi Tiết */}
+      {/* Enhanced Demo Modal */}
       {showModal && selectedTheme && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-2 sm:p-4 animate-fadeIn"
           onClick={closeDemoModal}
         >
           <div
-            className="bg-white dark:bg-gray-800 rounded-xl shadow-xl max-w-2xl w-full max-h-[80vh] overflow-auto"
+            className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl max-w-5xl w-full max-h-[85vh] overflow-hidden animate-slideUp"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="sticky top-0 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 p-6 rounded-t-xl">
+            {/* Modal Header */}
+            <div className="sticky top-0 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 p-6 rounded-t-3xl z-10">
               <div className="flex items-center justify-between">
-                <h3 className="text-xl font-semibold text-blue-600 dark:text-blue-400">
-                  Demos Chi Tiết: {selectedTheme.name}
-                </h3>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg">
+                    <Globe className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                      {selectedTheme.name}
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-300">
+                      {selectedTheme.demos?.length || 0} demo live có sẵn
+                    </p>
+                  </div>
+                </div>
                 <button
                   onClick={closeDemoModal}
-                  className="text-gray-400 hover:text-gray-600 text-2xl"
+                  className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200"
                 >
-                  ×
+                  <span className="text-2xl">×</span>
                 </button>
               </div>
             </div>
 
-            <div className="p-6">
-              <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-6">
-                <p className="text-blue-800 dark:text-blue-200 text-sm">
-                  Theme này có{" "}
-                  <strong>
-                    {selectedTheme.demos?.length || 0} mẫu demo LIVE
-                  </strong>{" "}
-                  chuyên biệt theo từng phân khúc ngành nghề. Bấm vào để xem
-                  trực tiếp!
-                </p>
+            {/* Modal Content */}
+            <div className="p-6 overflow-y-auto max-h-[calc(85vh-140px)]">
+              {/* Info Banner */}
+              <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 border border-blue-200 dark:border-blue-800 rounded-2xl p-5 mb-6">
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 animate-pulse flex-shrink-0"></div>
+                  <div className="min-w-0 flex-1">
+                    <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-1 text-base">
+                      Demo Live Websites
+                    </h4>
+                    <p className="text-blue-800 dark:text-blue-200 text-sm leading-relaxed">
+                      Theme{" "}
+                      <strong className="text-blue-900 dark:text-blue-100">
+                        {selectedTheme.name}
+                      </strong>{" "}
+                      có{" "}
+                      <strong className="text-blue-900 dark:text-blue-100">
+                        {selectedTheme.demos?.length || 0} mẫu demo LIVE
+                      </strong>{" "}
+                      chuyên biệt theo từng phân khúc ngành nghề. Mỗi demo được
+                      tối ưu riêng với phù hợp với các cấu sử dụng cụ thể. Bấm
+                      vào để xem trực tiếp!
+                    </p>
+                  </div>
+                </div>
               </div>
 
+              {/* Demo List */}
               <div className="space-y-4">
                 {selectedTheme.demos?.map((demo, index) => (
                   <div
                     key={demo.id}
-                    className="flex items-center justify-between p-4 border border-gray-200 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+                    className="group relative bg-white dark:bg-gray-800/80 border border-gray-200/60 dark:border-gray-700/60 rounded-2xl p-6 hover:bg-gradient-to-br hover:from-white hover:to-blue-50/30 dark:hover:from-gray-800 dark:hover:to-blue-900/20 hover:shadow-xl hover:shadow-blue-500/10 hover:border-blue-200/50 dark:hover:border-blue-700/50 transition-all duration-500 animate-slideUp transform hover:-translate-y-1 hover:scale-[1.02] backdrop-blur-sm"
+                    style={{ animationDelay: `${index * 100}ms` }}
                   >
-                    <div>
-                      <h4 className="font-medium text-gray-900 dark:text-white">
-                        Demo: {demo.name}
-                      </h4>
-                      {demo.url && (
-                        <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
-                          {demo.url}
-                        </p>
-                      )}
-                    </div>
-                    {demo.url && (
-                      <a
-                        href={
-                          demo.url.startsWith("http")
-                            ? demo.url
-                            : `https://${demo.url}`
-                        }
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 whitespace-nowrap"
-                        onClick={(e) => {
-                          console.log("Clicking demo URL:", demo.url);
-                          // If URL is invalid, prevent default and show error
-                          try {
-                            const url = new URL(
+                    <div className="flex flex-col gap-4">
+                      <div className="flex items-start gap-3">
+                        <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                          {index + 1}
+                        </div>
+                        <div className="min-w-0 flex-1">
+                          <h4 className="font-bold text-gray-900 dark:text-white text-lg leading-tight group-hover:text-blue-600 transition-colors">
+                            {demo.name}
+                          </h4>
+                          {demo.url && (
+                            <div className="mt-2">
+                              <p className="text-sm text-gray-500 dark:text-gray-400 font-mono bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-lg inline-block break-all">
+                                {demo.url.length > 40
+                                  ? demo.url.substring(0, 40) + "..."
+                                  : demo.url}
+                              </p>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+
+                      {/* Action Section */}
+                      <div className="flex items-center justify-between pt-3 border-t border-gray-200 dark:border-gray-600">
+                        <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
+                          <Eye className="w-4 h-4" />
+                          <span>2.1k views</span>
+                          <span>•</span>
+                          <span>⚡ Popular</span>
+                        </div>
+                        {demo.url && (
+                          <a
+                            href={
                               demo.url.startsWith("http")
                                 ? demo.url
                                 : `https://${demo.url}`
-                            );
-                            console.log("Valid URL:", url.href);
-                          } catch (error) {
-                            e.preventDefault();
-                            console.error("Invalid URL:", error);
-                            alert("URL không hợp lệ: " + demo.url);
-                          }
-                        }}
-                      >
-                        Live Demo 🔗
-                      </a>
-                    )}
+                            }
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group/btn relative inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 via-blue-700 to-purple-600 text-white px-4 py-2.5 rounded-xl hover:shadow-xl hover:shadow-blue-500/25 transform hover:scale-105 transition-all duration-300 font-semibold text-sm overflow-hidden"
+                            onClick={(e) => {
+                              console.log("Clicking demo URL:", demo.url);
+                              try {
+                                const url = new URL(
+                                  demo.url.startsWith("http")
+                                    ? demo.url
+                                    : `https://${demo.url}`
+                                );
+                                console.log("Valid URL:", url.href);
+                              } catch (error) {
+                                e.preventDefault();
+                                console.error("Invalid URL:", error);
+                                alert("URL không hợp lệ: " + demo.url);
+                              }
+                            }}
+                          >
+                            <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
+                            <ExternalLink className="w-4 h-4 group-hover/btn:rotate-12 transition-transform duration-300" />
+                            <span className="relative z-10">Xem Demo Live</span>
+                            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700"></div>
+                          </a>
+                        )}
+                      </div>
+                    </div>
                   </div>
                 ))}
+              </div>
+
+              {/* Footer Note */}
+              <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-gray-200 dark:border-gray-700">
+                <p className="text-center text-xs sm:text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+                  💡 Mỗi demo được tối ưu cho ngành nghề cụ thể và phù hợp với
+                  cầu sử dụng riêng. Chọn demo phù hợp nhất với nhu cầu dự án
+                  của bạn.
+                </p>
               </div>
             </div>
           </div>
